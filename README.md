@@ -1,4 +1,4 @@
-# Install-For-Town-Of-Us
+# Town Of Us Installer
 
 This is a simple script written in batch, it currently is only for windows, however i might make a version for linux.
 
