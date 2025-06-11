@@ -9,8 +9,9 @@ This is a simple script written in batch, it currently is only for windows, howe
 
 ## Planned Featues
 
-- [ ] Automatic manifest and mod fetch so script won't need to be updated everytime
+- [X] Automatic manifest and mod fetch so script won't need to be updated everytime
 - [ ] Automatically check for updates to the script and prompts for a install + does the install
+- [ ] Automatically adds Town Of Us as a non-steam game to steam
 
 ## Other stuff
 
