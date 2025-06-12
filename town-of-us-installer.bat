@@ -21,7 +21,7 @@ echo.
 echo 1. Install DepotDownloader (Needed for the script to work)
 echo 2. Install Among Us With Town Of Us
 echo 3. Uninstall DepotDownloader (Won't break Among Us)
-echo 4. Check For Updates (Work In Progress)
+echo 4. Check For Updates
 echo 5. Exit
 echo.
 
