@@ -5,7 +5,7 @@ for /f "tokens=2,*" %%A in ('reg query "HKLM\SOFTWARE\Wow6432Node\Valve\Steam" /
 set "gameDir=!steamPath!\steamapps\common\TOU"
 set "manifest="
 set "version="
-set "scriptVersion=4"
+set "scriptVersion=5"
 set "updateVersion="
 for /f "tokens=1,* delims=: " %%A in ('curl -s "https://raw.githubusercontent.com/Fl4keyJakey/Install-For-Town-Of-Us/refs/heads/main/manifest-and-mod-version.txt"') do (
     if /i "%%A"=="Manifest" set "manifest=%%B"
