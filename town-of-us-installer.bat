@@ -110,6 +110,8 @@ if "%scriptVersion%"=="%updateVersion%" (
     ) else (
         cls
         echo Error update not downloaded
+        pause
+        goto choice
     )
 )
 
