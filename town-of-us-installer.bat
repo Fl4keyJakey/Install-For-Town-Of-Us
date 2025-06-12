@@ -106,7 +106,7 @@ if "%scriptVersion%"=="%updateVersion%" (
     cls
     curl -L -o "%~dp0%~nx0.new" https://raw.githubusercontent.com/Fl4keyJakey/Install-For-Town-Of-Us/refs/heads/main/town-of-us-installer.bat
     if exist "%~dp0%~nx0.new" (
-       start /b "" cmd /c del /F /Q "%~dp0%~nx0" && timeout /T 2 /nobreak && rename "%~dp0%~nx0.new" "%~nx0" && start .\%~nx0 && exit /b
+       start /b "" cmd /c del /F /Q "%~dp0%~nx0" && timeout /T 2 /nobreak && rename "%~dp0%~nx0.new" "%~nx0" && start "" ".\%~nx0" && exit /b
     ) else (
         cls
         echo Error update not downloaded
