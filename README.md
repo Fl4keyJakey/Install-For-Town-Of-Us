@@ -2,12 +2,12 @@
 
 This is a simple script written in batch, it currently is only for windows, however i might make a version for linux.
 
-## Current Featues
+## Current Features
 
 * Installs DepotDownloader to download specific version of among us needed
 * Installs Among Us and Town Of Us and adds the files to the among us folder
 
-## Planned Featues
+## Planned Features
 
 - [X] Automatic manifest and mod fetch so script won't need to be updated everytime
 - [X] Automatically check for updates to the script and prompts for a install + does the install
