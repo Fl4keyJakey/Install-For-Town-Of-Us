@@ -5,7 +5,7 @@ for /f "tokens=2,*" %%A in ('reg query "HKLM\SOFTWARE\Wow6432Node\Valve\Steam" /
 set "gameDir=!steamPath!\steamapps\common\TOU"
 set "manifest="
 set "version="
-set "scriptVersion=3"
+set "scriptVersion=4"
 set "updateVersion="
 for /f "tokens=1,* delims=: " %%A in ('curl -s "https://raw.githubusercontent.com/Fl4keyJakey/Install-For-Town-Of-Us/refs/heads/main/manifest-and-mod-version.txt"') do (
     if /i "%%A"=="Manifest" set "manifest=%%B"
@@ -18,10 +18,15 @@ for /f "tokens=1,* delims=: " %%A in ('curl -s "https://raw.githubusercontent.co
 cls
 echo Town Of Us Installer [Made by _J011y_ on discord]
 echo.
+if not "%scriptVersion%"=="%updateVersion%" (
+    echo Update Found
+    echo please update by picking the forth option
+    echo.
+)
 echo 1. Install DepotDownloader (Needed for the script to work)
 echo 2. Install Among Us With Town Of Us
 echo 3. Uninstall DepotDownloader (Won't break Among Us)
-echo 4. Check For Updates
+echo 4. Install Any Updates
 echo 5. Exit
 echo.
 
