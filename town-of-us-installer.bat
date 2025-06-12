@@ -5,7 +5,7 @@ for /f "tokens=2,*" %%A in ('reg query "HKLM\SOFTWARE\Wow6432Node\Valve\Steam" /
 set "gameDir=!steamPath!\steamapps\common\TOU"
 set "manifest="
 set "version="
-set "scriptVersion=2"
+set "scriptVersion=3"
 set "updateVersion="
 for /f "tokens=1,* delims=: " %%A in ('curl -s "https://raw.githubusercontent.com/Fl4keyJakey/Install-For-Town-Of-Us/refs/heads/main/manifest-and-mod-version.txt"') do (
     if /i "%%A"=="Manifest" set "manifest=%%B"
@@ -98,9 +98,14 @@ if "%scriptVersion%"=="%updateVersion%" (
 ) else if not "%scriptVersion%"=="%updateVersion%" (
     echo Update found! Press any key to update
     pause
-    echo alright so, i have not finished coding this yet, but it will be done soon
-    pause
-    goto choice
+    cls
+    curl -L -o "%~dp0%~nx0.new" https://raw.githubusercontent.com/Fl4keyJakey/Install-For-Town-Of-Us/refs/heads/main/town-of-us-installer.bat
+    if exist "%~dp0%~nx0.new" (
+       start /b "" cmd /c del /F /Q "%~dp0%~nx0" && timeout /T 2 /nobreak && rename "%~dp0%~nx0.new" "%~nx0" && start .\%~nx0 && exit /b
+    ) else (
+        cls
+        echo Error update not downloaded
+    )
 )
 
 
